@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="designCars">
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Egghead Videos</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-route.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/module.js"></script>
+    <script type="text/javascript" src="scripts/controllers.js"></script>
+    
+   
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Design Cars</h1>
+    </div>
+  </div>
+  <div class="content" ng-controller="MainCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="sidebar col-lg-3" ng-show="home">
+          <ul class="nav {{active}}">
+            <li><a href="" ng-show="models" class="models">Models</a></li>
+            <li><a href="" ng-show="engines" class="engines">Engine</a></li>
+            <li><a href="" ng-show="colors" class="colors">Color</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-9" ng-view></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <p>Copyright @ DesignCars</p>
+    </div>
+  </div>
+</body>
+</html>

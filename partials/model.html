@@ -1,0 +1,11 @@
+<h1>{{model.message}}</h1>
+
+<div class="model-images">
+	<div class="item" ng-repeat="images in models" style="padding-top:20px;">
+		<a href="" ng-click="details($index)" ><img src="{{images.image_path}}" style="width:200px;height:142px;"></a>
+		<div class="model-name">{{images.name | uppercase}}</div>
+	</div>
+</div>
+
+<div style="clear:both;">&nbsp;</div>
+<button type="button" class="btn btn-green" ng-click="nextPhase()">Next</button>
